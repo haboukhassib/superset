@@ -571,7 +571,17 @@ COMMON_BOOTSTRAP_OVERRIDES_FUNC: Callable[
 #     }]
 
 # This is merely a default
-EXTRA_CATEGORICAL_COLOR_SCHEMES: list[dict[str, Any]] = []
+# EXTRA_CATEGORICAL_COLOR_SCHEMES: list[dict[str, Any]] = []
+
+# Single Color Scheme for grc dashboard
+EXTRA_CATEGORICAL_COLOR_SCHEMES = [
+    {
+        "id": 'singleColorScheme',
+        "description": 'Single Color Scheme',
+        "label": 'Single Color Scheme',
+        "isDefault": True,
+        "colors": ['#1FA8C9']
+    }]
 
 # THEME_OVERRIDES is used for adding custom theme to superset
 # example code for "My theme" custom scheme

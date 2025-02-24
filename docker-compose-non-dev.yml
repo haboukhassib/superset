@@ -14,7 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-x-superset-image: &superset-image apachesuperset.docker.scarf.sh/apache/superset:${TAG:-latest}
+x-superset-image: &superset-image apache/superset:4.0.1
+#x-superset-image: &superset-image apachesuperset.docker.scarf.sh/apache/superset:${TAG:-latest}
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
@@ -91,6 +92,16 @@ services:
     volumes: *superset-volumes
     healthcheck:
       disable: true
+
+#  jmix_database:
+#    image: postgres:16.3
+#    container_name: grc_database
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_DB: onboarding
+#      POSTGRES_USER: jmix
+#      POSTGRES_PASSWORD: jmix
 
 volumes:
   superset_home:
