@@ -24,7 +24,6 @@ x-superset-volumes:
   - ./docker:/app/docker
   - superset_home:/app/superset_home
 
-
 services:
   redis:
     image: redis:7
@@ -92,16 +91,6 @@ services:
     volumes: *superset-volumes
     healthcheck:
       disable: true
-
-#  jmix_database:
-#    image: postgres:16.3
-#    container_name: grc_database
-#    ports:
-#      - 5432:5432
-#    environment:
-#      POSTGRES_DB: onboarding
-#      POSTGRES_USER: jmix
-#      POSTGRES_PASSWORD: jmix
 
 volumes:
   superset_home:
