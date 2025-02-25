@@ -3,6 +3,7 @@ FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True,
     # "DASHBOARD_NATIVE_FILTERS_SET": True,
 }
+OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
 TALISMAN_CONFIG = {
     "content_security_policy": {
         "base-uri": ["'self'"],
