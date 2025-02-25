@@ -11,6 +11,8 @@ TALISMAN_CONFIG = {
     "force_https": False,
     "strict_transport_security": False
 }
+WTF_CSRF_ENABLED = False
+WTF_CSRF_EXEMPT_LIST = ["superset.views.core.guest_token"]
 
 # TALISMAN_CONFIG = {
 #     "content_security_policy": {
