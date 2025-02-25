@@ -6,7 +6,12 @@ FEATURE_FLAGS = {
     # "DASHBOARD_NATIVE_FILTERS_SET": True,
 }
 OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
-TALISMAN_CONFIG = None
+TALISMAN_CONFIG = {
+    "content_security_policy": None,
+    "force_https": False,
+    "strict_transport_security": False
+}
+
 # TALISMAN_CONFIG = {
 #     "content_security_policy": {
 #         "base-uri": ["'self'"],
