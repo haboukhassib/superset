@@ -4,6 +4,7 @@ GUEST_ROLE_NAME = 'EmbeddedViewer'
 FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True,
 }
+WTF_CSRF_ENABLED = False
 
 TALISMAN_CONFIG = {
     "content_security_policy": {
